@@ -1,0 +1,6 @@
+FROM ubuntu:latest
+RUN apt-get update
+RUN apt-get install nginx -y
+COPY ngnix.conf /etc/nginx/sites-enable/default
+CMD ["nginx","-y", "deamon -ff"]
+
